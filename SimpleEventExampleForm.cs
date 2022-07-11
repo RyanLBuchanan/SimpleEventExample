@@ -21,5 +21,16 @@ namespace SimpleEventExample
         {
             MessageBox.Show("Button was clicked");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void displayPasswordButton_Click(object sender, EventArgs e)
+        {
+            // Display the text the user typed
+            displayPasswordLabel.Text = inputPasswordTextBox.Text;
+        }
     }
 }

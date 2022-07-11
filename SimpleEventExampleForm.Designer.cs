@@ -30,6 +30,9 @@
         {
             this.clickButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.inputPasswordTextBox = new System.Windows.Forms.TextBox();
+            this.displayPasswordLabel = new System.Windows.Forms.Label();
+            this.displayPasswordButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // clickButton
@@ -54,11 +57,46 @@
             this.button1.Text = "Bottom Right Anchor";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // inputPasswordTextBox
+            // 
+            this.inputPasswordTextBox.Location = new System.Drawing.Point(192, 129);
+            this.inputPasswordTextBox.Name = "inputPasswordTextBox";
+            this.inputPasswordTextBox.Size = new System.Drawing.Size(100, 23);
+            this.inputPasswordTextBox.TabIndex = 2;
+            this.inputPasswordTextBox.UseSystemPasswordChar = true;
+            // 
+            // displayPasswordLabel
+            // 
+            this.displayPasswordLabel.AutoSize = true;
+            this.displayPasswordLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.displayPasswordLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.displayPasswordLabel.Location = new System.Drawing.Point(192, 177);
+            this.displayPasswordLabel.MaximumSize = new System.Drawing.Size(97, 23);
+            this.displayPasswordLabel.MinimumSize = new System.Drawing.Size(97, 23);
+            this.displayPasswordLabel.Name = "displayPasswordLabel";
+            this.displayPasswordLabel.Size = new System.Drawing.Size(97, 23);
+            this.displayPasswordLabel.TabIndex = 3;
+            this.displayPasswordLabel.Text = "\r\n";
+            this.displayPasswordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // displayPasswordButton
+            // 
+            this.displayPasswordButton.Location = new System.Drawing.Point(195, 224);
+            this.displayPasswordButton.Name = "displayPasswordButton";
+            this.displayPasswordButton.Size = new System.Drawing.Size(97, 23);
+            this.displayPasswordButton.TabIndex = 4;
+            this.displayPasswordButton.Text = "Show Me";
+            this.displayPasswordButton.UseVisualStyleBackColor = true;
+            this.displayPasswordButton.Click += new System.EventHandler(this.button2_Click);
+            // 
             // SimpleEventExampleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(484, 461);
+            this.Controls.Add(this.displayPasswordButton);
+            this.Controls.Add(this.displayPasswordLabel);
+            this.Controls.Add(this.inputPasswordTextBox);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.clickButton);
             this.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,6 +104,7 @@
             this.Name = "SimpleEventExampleForm";
             this.Text = "Simple Event Example";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -73,6 +112,9 @@
 
         private System.Windows.Forms.Button clickButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox inputPasswordTextBox;
+        private System.Windows.Forms.Label displayPasswordLabel;
+        private System.Windows.Forms.Button displayPasswordButton;
     }
 }
 
